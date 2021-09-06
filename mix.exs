@@ -26,8 +26,8 @@ defmodule ExOauth2Provider.Mixfile do
     [extra_applications: extra_applications(Mix.env)]
   end
 
-  defp extra_applications(:test), do: [:ecto, :logger]
-  defp extra_applications(_), do: [:logger]
+  defp extra_applications(:test), do: [:ecto, :logger, :eex, :jason]
+  defp extra_applications(_), do: [:logger, :eex, :jason]
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
